@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pic2iq"
+version = "0.1.0"
+description = "Convert images to SigMF I/Q recordings whose spectrogram shows the image"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy>=1.12",
+    "pillow>=10.1",
+    "sigmf",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-xdist",
+    "pytest-cov",
+    "black",
+    "pylint",
+]
+
+[project.scripts]
+pic2iq = "pic2iq.__main__:main"
+
+[tool.setuptools]
+packages = ["pic2iq"]
+
+[tool.black]
+target-version = ["py311"]
+
+[tool.pylint.design]
+max-args = 10
+max-positional-arguments = 10
+max-locals = 25
