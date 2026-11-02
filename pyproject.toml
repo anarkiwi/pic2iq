@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Convert images to SigMF I/Q recordings whose spectrogram shows the image"
 readme = "README.md"
 license = { text = "Apache-2.0" }
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "numpy",
     "scipy>=1.12",
@@ -32,7 +32,7 @@ pic2iq = "pic2iq.__main__:main"
 packages = ["pic2iq"]
 
 [tool.black]
-target-version = ["py311"]
+target-version = ["py312"]
 
 [tool.pylint.design]
 max-args = 10
